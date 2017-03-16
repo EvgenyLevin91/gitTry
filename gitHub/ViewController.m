@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *field;
+@property (weak, nonatomic) IBOutlet UITextField *sField;
 
 @end
 
@@ -25,6 +26,8 @@
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Message:" message:_field.text delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
     
     [alert show];
+    
+    self.sField.text = _field.text;
     
 }
 
